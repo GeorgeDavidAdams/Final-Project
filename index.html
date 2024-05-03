@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First HTML Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body></body>
+<header>Run Time Per Movie</header>
+    <svg width="600" height="600">
+        <rect id="bar1" x="50" y="50" width="20" height="80" fill="blue"></rect>
+        <rect id="bar2" x="90" y="50" width="20" height="80" fill="red"></rect>
+        <rect id="bar3" x="130" y="50" width="20" height="80"fill="green"></rect>
+        <rect id="bar4" x="170" y="50" width="20" height="80" fill="yellow"></rect>
+        <rect id="bar5" x="210" y="50" width="20" height="80" fill="pink"></rect>
+        <rect id="bar6" x="250" y="50" width="20" height="80"fill="purple"></rect>
+        <rect id="bar7" x="290" y="50" width="20" height="80" fill="grey"></rect>
+        <rect id="bar8" x="330" y="50" width="20" height="80" fill="black"></rect>
+        <rect id="bar9" x="370" y="50" width="20" height="80"fill="brown"></rect>
+        <rect id="bar10" x="410" y="50" width="20" height="80" fill="aqua"></rect>
+        
+        <line x1="40" x2="450" y1="152" y2="152" stroke="black"></line>
+        <line x1="40" x2="40" y1="0" y2="152" stroke="black"></line>
+        
+        <text x="55" y="160" style="font-size: 10px">DJ</text>
+        <text x="90" y="160" style="font-size: 10px">MLP</text>
+        <text x="130" y="160" style="font-size: 10px">SAN</text>
+        <text x="175" y="160" style="font-size: 10px">TS</text>
+        <text x="210" y="160" style="font-size: 10px">JSK</text>
+        <text x="250" y="160" style="font-size: 10px">COI</text>
+        <text x="290" y="160" style="font-size: 10px">EDM</text>
+        <text x="330" y="160" style="font-size: 10px">ITS</text>
+        <text x="370" y="160" style="font-size: 10px">AS</text>
+        <text x="410" y="160" style="font-size: 10px">GGC</text>
+
+        <text x="20" y="150" style="font-size: 10px">0</text>
+        <text x="20" y="130" style="font-size: 10px">20</text>
+        <text x="20" y="110" style="font-size: 10px">40</text>
+        <text x="20" y="90" style="font-size: 10px">60</text>
+        <text x="20" y="70" style="font-size: 10px">80</text>
+        <text x="20" y="50" style="font-size: 10px">100</text>
+        <text x="20" y="30" style="font-size: 10px">120</text>
+        <text x="20" y="10" style="font-size: 10px">140</text>
+
+        <text x="20" y="300" style="font-size: 10px">Link to Documentation and Youtube: https://github.com/GeorgeDavidAdams/Final-Project</text>
+        
+
+        <script>
+
+            var runTime = [90, 91, 125, 104, 127, 91, 67, 94, 161, 61];
+
+            d3.select('svg').selectAll('rect').data(runTime).attr('height', function(d) {
+                return d;
+            })
+            .attr('y', function(d) {
+                return 102 - d + 50;
+            });
+
+            
+        </script>
+    
+    </svg>
+</body>
+</html>
